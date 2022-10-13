@@ -20,12 +20,9 @@
 .swp
 TAGS
 Thumbs.db
-draft.fls
-draft.log
-draft.out
-draft.pdf
-main.log
-main.out
-main.pdf
 target
-/.settings/
+**/.settings/
+**/out/
+**/.aadlbin-gen/
+**/.settings/
+**/.IR/
