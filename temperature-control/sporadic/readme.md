@@ -1,4 +1,4 @@
-# sporadic
+# Temperature Control - Sporadic Version
 
  Table of Contents
 <!--table-of-contents_start-->
@@ -63,13 +63,10 @@
 <!--aadl-model-with-gumbo-contracts_end-->
 
 
-## JVM
-<!--JVM_start--><!--JVM_end-->
-
-### Running HAMR Code Generation
+## Running HAMR Code Generation
 <!--running-hamr-code-generation_start--><!--running-hamr-code-generation_end-->
 
-#### From within FMIDE
+### From within FMIDE
 <!--from-within-fmide_start-->
 To run HAMR Codegen, select [this](aadl/packages/TempControlSoftwareSystem.aadl#L61) system implementation in FMIDE's outline view and then click the
 HAMR button in the toolbar.  Use the following values in the dialog box that opens up (_&lt;example-dir&gt;_ is the directory that contains this readme file)
@@ -83,7 +80,7 @@ Base Package Name|tc|
 <!--from-within-fmide_end-->
 
 
-#### From the Command Line
+### From the Command Line
 <!--from-the-command-line_start-->
 Run the following script: [aadl/bin/run-hamr.cmd](aadl/bin/run-hamr.cmd)
 
@@ -93,8 +90,7 @@ Run the following script: [aadl/bin/run-hamr.cmd](aadl/bin/run-hamr.cmd)
 <!--from-the-command-line_end-->
 
 
-
-### Slang Behavior Code
+## Slang Behavior Code
 <!--slang-behavior-code_start-->
   * [tempSensor*](hamr/slang/src/main/component/tc/TempSensor/TempSensor_s_tcproc_tempSensor.scala)
 
@@ -107,19 +103,17 @@ Run the following script: [aadl/bin/run-hamr.cmd](aadl/bin/run-hamr.cmd)
  *\* denotes the the file contains Logika contracts derived from GUMBO*
 <!--slang-behavior-code_end-->
 
-
-### How to Build and Run the Generated Slang Program
+## How to Build and Run the Generated Slang Program
 <!--how-to-build-and-run-the-generated-slang-program_start-->
 See the instructions in the generated Proyek project definition file [hamr/slang/bin/project.cmd](hamr/slang/bin/project.cmd)
 for instructions on how to build/run the program from within IVE or from
 the command line
 <!--how-to-build-and-run-the-generated-slang-program_end-->
 
-
-### Verifying the Slang Program Using Logika
+## Verifying the Slang Program Using Logika
 <!--verifying-the-slang-program-using-logika_start--><!--verifying-the-slang-program-using-logika_end-->
 
-#### From the Command Line
+### From the Command Line
 <!--from-the-command-line_start-->
 To have Logika verify the entire program, ``cd`` to the directory that contains this
 readme and then run the following
@@ -138,7 +132,7 @@ $SIREUM_HOME/bin/sireum proyek logika --timeout 3 --all ./hamr/slang
 <!--from-the-command-line_end-->
 
 
-#### From within IVE
+### From within IVE
 <!--from-within-ive_start-->
 In IVE open the Slang file you want to verify.  If the file is in Logika
 (identified by the presence of ``#Logika`` in the first line) then you'll be able to
@@ -148,5 +142,4 @@ Logika's timeout option can be set by navigating to
 ``Preferences >> Tools >> Sireum >> Logika`` and setting the desired timeout
 in milliseconds
 <!--from-within-ive_end-->
-
 
